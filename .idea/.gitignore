@@ -1,0 +1,9 @@
+# Default ignored files
+# Ignore compiled files
+*.class
+
+# Ignore IDE files
+*.iml
+.idea/
+/shelf/
+/workspace.xml
