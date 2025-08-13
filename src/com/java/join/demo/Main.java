@@ -1,19 +1,4 @@
-package com.java;
-
-class ThreadJoinDemo{
-    public void printElements(){
-        try {
-            System.out.println(Thread.currentThread().getName()+" is executing");
-            for (int i = 0; i < 5; i++) {
-                System.out.println(i);
-                Thread.sleep(1000l);
-
-            }
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-    }
-}
+package com.java.join.demo;
 
 public class Main {
     public static void main(String[] args) {
