@@ -35,10 +35,10 @@ public class Main {
         ReentrantLock lock = new ReentrantLock();
         ReentrantLockDemo d = new ReentrantLockDemo(lock);
         ReentrantLockDemo d1 = new ReentrantLockDemo(lock);
-        Thread t1 = new Thread(()->d.demo(),"t1");
-        Thread t2 = new Thread(()->d1.demo(),"t2");
-        Thread t3 = new Thread(()->d.demo(),"t3");
-        Thread t4 = new Thread(()->d1.demo(),"t4");
+        Thread t1 = new Thread(d::demo,"t1");
+        Thread t2 = new Thread(d1::demo,"t2");
+        Thread t3 = new Thread(d::demo,"t3");
+        Thread t4 = new Thread(d1::demo,"t4");
         t1.start();t2.start();t3.start();t4.start();
     }
 }
