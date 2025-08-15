@@ -19,7 +19,7 @@ class ReadWriteLockDemo {
             Thread.sleep(1000);
             System.out.println(Thread.currentThread().getName() + " completed Write operation.");
         } catch (InterruptedException e) {
-            Thread.currentThread().interrupt(); // Restore interrupt status
+            Thread.currentThread().interrupt(); 
             System.err.println("Write operation interrupted for " + Thread.currentThread().getName());
         } finally {
             lock.writeLock().unlock();
@@ -36,7 +36,7 @@ class ReadWriteLockDemo {
             Thread.sleep(500);
             System.out.println(Thread.currentThread().getName() + " completed Read operation.");
         } catch (InterruptedException e) {
-            Thread.currentThread().interrupt(); // Restore interrupt status
+            Thread.currentThread().interrupt(); 
             System.err.println("Read operation interrupted for " + Thread.currentThread().getName());
         } finally {
             lock.readLock().unlock();
